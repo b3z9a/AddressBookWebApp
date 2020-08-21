@@ -6,7 +6,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.PreparedStatement;
 import java.sql.Statement;
@@ -26,28 +25,13 @@ public class AddressRepository {
         this.template.update(con -> {
             PreparedStatement preparedStatement = con.prepareStatement("insert into address (name,last_name,address) values (?,?,?);", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, addressBook.getFirstName());
-            preparedStatement.setString(2,addressBook.getFirstName());
+            preparedStatement.setString(2,addressBook.getLastName());
             preparedStatement.setString(3, addressBook.getAddress());
             return preparedStatement;
         },holder);
         addressBook.setId(Integer.parseInt(holder.getKeys().get("id").toString()));
 
         return addressBook;
-    }
-
-    //"";delete from users;;
-    @Transactional
-    public AddressBook getAddressByFirstname(final String firstName){
-       return  this.template.queryForObject(
-                "SELECT * from address where name = ?;",
-                        new Object[]{firstName},
-                (resultSet, i) -> new AddressBook(
-                        resultSet.getInt("id"),
-                        resultSet.getString("name"),
-                        resultSet.getString("last_name"),
-                        resultSet.getString("address")
-                )
-        );
     }
 
     public boolean delete(int id) {

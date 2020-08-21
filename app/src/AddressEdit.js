@@ -43,7 +43,7 @@ class AddressEdit extends Component {
     async handleSubmit(event) {
         event.preventDefault();
         const {item} = this.state;
-        console.log(item.id+" Ud");
+        console.log(item);
         await fetch('/addresses' + (item.id ? '/' + item.id : ''), {
             method: (item.id) ? 'PUT' : 'POST',
             headers: {

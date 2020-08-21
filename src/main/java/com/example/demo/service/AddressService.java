@@ -23,14 +23,6 @@ public class AddressService {
         }
     }
 
-    public AddressBook getBookByFirstName(final String firstName){
-        try {
-            return this.repository.getAddressByFirstname(firstName);
-        }catch(DataAccessException exc){
-            return null;
-        }
-    }
-
     public boolean delete(int id) {
         return this.repository.delete(id);
     }
