@@ -68,7 +68,8 @@ public class AddressController {
         } else{
             return ResponseEntity.ok(address);
         }
-     }
+    }
+
     @GetMapping("/addresses")
     public ResponseEntity<List<AddressBook>> getAddress(
             @RequestParam(required = false) final String firstName,
