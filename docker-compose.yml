@@ -1,0 +1,29 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:11.3
+    container_name: postgres
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=Bluejr11!
+      - POSTGRES_USER=jennabains
+      - POSTGRES_DB=test
+  # APP*****************************************
+  springbootapp:
+    image: springbootapp:latest
+    container_name: test
+    build: .
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    links:
+      - postgres
