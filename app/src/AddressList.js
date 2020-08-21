@@ -35,9 +35,9 @@ class AddressList extends Component {
                     <div className="float-margin-bottom">
                         <Button color="success" onClick={()=>this.edit('/edit/new')}>Add Contact</Button>
                     </div>
-                    <div className="float-right">
+{/*                    <div className="float-right">
                         <input type="text" className="input" placeholder="Search..."/>
-                    </div>
+                    </div>*/}
                     <Table className="mt-4">
                         <thead>
                         <tr>
