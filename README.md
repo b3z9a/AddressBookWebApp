@@ -1,5 +1,5 @@
 ## Address book
-Backend for address book app service
+Backend for address book app service <br />
 Frontend: Please see inside **app** README.md
 
 ## Technologies
@@ -54,8 +54,9 @@ curl -X DELETE http://localhost:8080/addresses/14
 ```
 
 ### Get addresses 
-Url format `localhost:8080/addresses?firstName&lastName&address`
-All params are optional. Search will be performed using wildcard on each field
+Url format `localhost:8080/addresses?firstName&lastName&address` <br />
+All params are optional. <br />
+Search will be performed using wildcard on each field
 ```
   curl localhost:8080/addresses?address=Alber
 ```
