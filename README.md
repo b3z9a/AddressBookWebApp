@@ -1,5 +1,6 @@
 ## Address book
 Backend for address book app service
+Frontend: Please see inside **app** README.md
 
 ## Technologies
 1. Spring Boot 2.3.3
