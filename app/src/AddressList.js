@@ -30,10 +30,7 @@ class AddressList extends Component {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
                     <div className="App-intro">
-                        <h2>Address Book Contacts</h2>
-                    </div>
-                    <div className="float-margin-bottom">
-                        <Button color="success" onClick={()=>this.edit('/edit/new')}>Add Contact</Button>
+                        <h2>Address Book</h2>
                     </div>
 {/*                    <div className="float-right">
                         <input type="text" className="input" placeholder="Search..."/>
@@ -64,6 +61,9 @@ class AddressList extends Component {
                         <tbody>
                         </tbody>
                     </Table>
+                    <div className="float-margin-bottom">
+                        <Button color="success" onClick={()=>this.edit('/edit/new')}>Add Contact</Button>
+                    </div>
                 </header>
             </div>
         )
