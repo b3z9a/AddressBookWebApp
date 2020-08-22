@@ -8,8 +8,8 @@ Backend for address book app service
 
 ## How to build
 
-1. First of all create a database called `test`
-2. Then create a table `address` using **init.sql**
+1. Create a database called `test`
+2. Create a table `address` using **init.sql**
 
 Run this command in order to create a jar file
 ```
