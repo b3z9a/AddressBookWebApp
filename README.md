@@ -1,5 +1,6 @@
 ## Address book
-Backend for address book app service <br />
+Backend: For address book web app service <br /> 
+<br />
 Frontend: Please see inside **app** README.md
 
 ## Technologies
