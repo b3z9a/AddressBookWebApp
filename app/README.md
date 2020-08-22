@@ -8,8 +8,7 @@ Proxy was configured for url `localhost:8080`
 **add**, **delete**, **edit**, and **search** contacts in the address book.
 **Cross Origins are not configured**
 ## How to Test
-1. Open the project and run the following commands:
-Url format 
+1. Open the project and run the following commands: 
 ```
 cd app
 yarn start
