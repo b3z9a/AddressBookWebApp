@@ -56,9 +56,9 @@ class AddressList extends Component {
                         <button onClick={() => this.search_firstName()}>Search by First Name</button>
                     </div>
                     <div>
-                        <Input style={{width:"50%", display:"initial"}} name="search_firstName" id="search_lastName"
+                        <Input style={{width:"50%", display:"initial"}} name="search_lastName" id="search_lastName"
                                onChange={this.handleChange}/>
-                        <button onClick={() => this.search_firstName()}>Search by Last Name</button>
+                        <button onClick={() => this.search_lastName()}>Search by Last Name</button>
                     </div>
                     <div>
                         <Input style={{width:"50%", display:"initial"}} name="search_address" id="search_address"
